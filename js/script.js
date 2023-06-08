@@ -11,7 +11,7 @@ const createCell = (number) => {
     return cell;
 }
 
-// Arrow Function per generare le bombe
+// Arrow Function per generare l'array bombe
 const generateBombs = (totalNumberBombs, maxNumber) => {
     let bombs = [];
 
@@ -45,7 +45,7 @@ const totalBombs = 16;
 // Punteggio massimo
 const maxPoints = totalCells - totalBombs;
 
-// Creo una variabile per le bombe (usando Arrow Function generateBombs)
+// Creo una variabile per l'array di bombe (usando Arrow Function generateBombs)
 const bombs = generateBombs(totalBombs, totalCells);
 // stampo in console
 console.log(bombs);
@@ -80,8 +80,20 @@ button.addEventListener ('click', function () {
       const cellNumber = clickedCell.innerText;
       console.log('Numero della cella cliccata:', cellNumber);
       clickedCell.classList.add('cell-clicked');
-      // Incemento lo score
+
+     //   Verifico se l'utente ha cliccato su una bomba
+      const isBoomb = bombs.includes(parseInt(cellNumber));
+
+      if (isBoomb){
+        // Se si, la cell diventa rossa e stampo in console un messaggio con lo score.
+        cell.classList.add('cell-bomb')
+        //  stampo in console
+        console.log('Mi dispiace, hai perso! Partita terminata! Punteggio:' + score);
+      }else{
+        // Altrimenti Incemento lo score
       scoreElement.innerText = ++score;
+      }
+
      }
 
        // Aggiungo il gestore di eventi al click sulla cell

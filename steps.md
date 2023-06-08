@@ -44,5 +44,10 @@ Quando la partita termina dobbiamo capire se è terminata perchè è stata clicc
 - Preparo i dati iniziali delle bombe
   - Totale delle bombe
 - Preparo il Punteggio massimo
-- Creo una Arrow funzione per generare le bombe (generateBombs)
-- Creo una variabile per le bombe (usando la funzione precedente generateBombs)
+- Creo una Arrow funzione per generare l'array di bombe (generateBombs)
+- Creo una variabile per l'array di bombe (usando la funzione precedente generateBombs)
+- MILESTONE 3
+- Preparo una classe con css per la bomba con (background-color: red;)
+- Verifico se l'utente ha cliccato una bomba
+  - Se si, la cell diventa rossa e stampo in console un messaggio con lo score.
+  - Altrimenti incremento lo score

@@ -37,6 +37,10 @@ main {
     background-color: lightblue;
 }
 
+.cell-bomb {
+    background-color: red;
+}
+
 
 /* Footer */
 footer {
