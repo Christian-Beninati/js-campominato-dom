@@ -53,6 +53,9 @@ console.log(bombs);
 // Creo una variabile per lo score
 let score = 0;
 
+// Creo una variabile per tenere la partita
+let gameEnded = false;
+
 
 // Creo una variabile per tenere traccia dello stato della grid
 let gridVisible = false;
@@ -74,7 +77,12 @@ button.addEventListener ('click', function () {
       // # FUNCTION---------------------------------------
       // FUNCTION per gestire il click sulla cell
       const handleCellClick = (event) => {
+
+        // Controllo se la partita è terminata
+        if (gameEnded) return;
+
       // Verifico se la cell è già stata cliccata
+     // SE isMatchOver è true  o  la cell è già stata cliccata, FINISCI LA PARTITA.
       if (cell.classList.contains('cell-clicked')) return;
       const clickedCell = event.target;
       const cellNumber = clickedCell.innerText;
@@ -89,6 +97,9 @@ button.addEventListener ('click', function () {
         cell.classList.add('cell-bomb')
         //  stampo in console
         console.log('Mi dispiace, hai perso! Partita terminata! Punteggio:' + score);
+        alert ('Mi dispiace, hai perso! Partita terminata! Punteggio:' + score);
+        // Imposto lo stato della partita su terminato
+        gameEnded = true;
       }else{
         // Altrimenti Incemento lo score
       scoreElement.innerText = ++score;
@@ -97,6 +108,9 @@ button.addEventListener ('click', function () {
      //   Verifico se l'utente ha visto
       if (score === maxPoints) {
         console.log('Congratulazioni, Hai vinto! Punteggio:' + score);
+        alert ('Congratulazioni, Hai vinto! Punteggio:' + score);
+        // Imposto lo stato della partita su terminato
+        gameEnded = true;
       }
 
      }

@@ -54,3 +54,8 @@ Quando la partita termina dobbiamo capire se è terminata perchè è stata clicc
 - MILESTONE 4
 - Verifico se l'utente ha vinto
   - Se si, stampo in console un messaggio con lo score.
+- MILESTONE 5
+- Se l'utente ha vinto scrivo un messaggio in pagina
+- Se l'utente ha perso scrivo un messaggio in pagina
+- Mi assicuro che la partita è terminata.
+- Fine
