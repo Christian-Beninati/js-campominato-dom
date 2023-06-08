@@ -53,7 +53,7 @@ console.log(bombs);
 // Creo una variabile per lo score
 let score = 0;
 
-// Creo una variabile per tenere la partita
+// Creo una variabile per terminare la partita
 let gameEnded = false;
 
 
