@@ -1,0 +1,45 @@
+
+/* Header */
+header {
+    height: 100px;
+}
+
+.container-header, .container-footer, .container-main{
+    height: 100%;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Main */
+main {
+    height: calc(100vh - 180px);
+    background-color: #7FFDD4;
+}
+
+#grid {
+    width: 600px;
+    height: 600px;
+}
+
+.cell {
+    flex-basis: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell-clicked {
+    background-color: lightblue;
+}
+
+
+/* Footer */
+footer {
+    height: 80px;
+}
+
