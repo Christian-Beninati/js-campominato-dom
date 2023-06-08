@@ -94,6 +94,11 @@ button.addEventListener ('click', function () {
       scoreElement.innerText = ++score;
       }
 
+     //   Verifico se l'utente ha visto
+      if (score === maxPoints) {
+        console.log('Congratulazioni, Hai vinto! Punteggio:' + score);
+      }
+
      }
 
        // Aggiungo il gestore di eventi al click sulla cell

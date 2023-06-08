@@ -51,3 +51,6 @@ Quando la partita termina dobbiamo capire se è terminata perchè è stata clicc
 - Verifico se l'utente ha cliccato una bomba
   - Se si, la cell diventa rossa e stampo in console un messaggio con lo score.
   - Altrimenti incremento lo score
+- MILESTONE 4
+- Verifico se l'utente ha vinto
+  - Se si, stampo in console un messaggio con lo score.
