@@ -11,6 +11,21 @@ const createCell = (number) => {
     return cell;
 }
 
+// Arrow Function per generare le bombe
+const generateBombs = (totalNumberBombs, maxNumber) => {
+    let bombs = [];
+
+    while (bombs.length < totalNumberBombs){
+        let randomNumber;
+        do{ 
+         randomNumber = Math.floor(Math.random() * maxNumber) + 1;
+        }while (bombs.includes(randomNumber));
+        bombs.push(randomNumber);
+    }
+    return bombs;
+}
+
+
 // # INITIAN OPERATIONS----------------------------
 
 // Recupero gli elementi dal DOM
@@ -19,17 +34,28 @@ const button = document.getElementById('button')
 const scoreElement = document.getElementById('score')
 
 
-// Preparo dati iniziali
+// Preparo dati iniziali delle cell
 const rows = 10;
 const cols = 10;
 const totalCells = cols * rows;
 
-// Creo una variabile per tenere traccia dello stato della grid
-let gridVisible = false;
+// Preparo dati iniziali delle bombe
+// numero delle bombe
+const totalBombs = 16;
+// Punteggio massimo
+const maxPoints = totalCells - totalBombs;
+
+// Creo una variabile per le bombe (usando Arrow Function generateBombs)
+const bombs = generateBombs(totalBombs, totalCells);
+// stampo in console
+console.log(bombs);
 
 // Creo una variabile per lo score
 let score = 0;
 
+
+// Creo una variabile per tenere traccia dello stato della grid
+let gridVisible = false;
 
 // # Game Logic-------------------------------------
 

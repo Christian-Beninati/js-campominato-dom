@@ -33,8 +33,16 @@ Quando la partita termina dobbiamo capire se è terminata perchè è stata clicc
 <br>
 
 - Inizio
+
+- MILESTONE 1
 - Creo una struttura in HTML per visualizzare lo score in pagina
 - Recupero l'elemento dal DOM
 - Creo una variabile per lo scoore
 - Incrementoo lo score al click
 - Verifico se la cell è già stata cliccata
+- MILESTONE 2
+- Preparo i dati iniziali delle bombe
+  - Totale delle bombe
+- Preparo il Punteggio massimo
+- Creo una Arrow funzione per generare le bombe (generateBombs)
+- Creo una variabile per le bombe (usando la funzione precedente generateBombs)
